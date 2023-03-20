@@ -1,0 +1,125 @@
+html {
+    max-width: 100ch;
+    margin: auto;
+    font-size: 1.3em/1.65;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background: #191919;
+    color: white;
+}
+
+header {
+    
+}
+
+#title-container {
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+header img {
+    vertical-align: middle;
+    margin-right: 1.1rem;
+    margin-top: 0.3rem;
+}
+
+#header-title h1 {
+    margin: 0;
+}
+
+#header-nav {
+    /* background-color: red; */
+    text-align: center;
+    display: flex;
+    /* flex-direction: row;
+    place-items: center; */
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    /* column-gap: 4rem; */
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links li {
+    margin-right: 3.5rem;
+}
+#nav-links li:last-child {
+    margin-right: 0;
+}
+
+#nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+    transition: all .2s ease;
+}
+
+#nav-links a:hover {
+    color: rgb(93, 161, 255);
+}
+
+#menu-button {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #header-nav {
+        /* display: none; */
+        flex-direction: column;
+    }
+
+    #header-nav.active {
+        /* display: block; */
+    }
+  
+    #nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+    }
+
+    #nav-links.active {
+        display: block;
+    }
+  
+    #nav-links li {
+      margin: 10px 0;
+    }
+  
+    #menu-button {
+      display: block;
+      color: #fff;
+      font-size: 1.2rem;
+      border: 1px solid white;
+      border-radius: 0.2rem;
+      background: transparent;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+    #bars-icon {
+        display: inline-block;
+        height: 0.9rem;
+        width: 1rem;
+        background-color: white;
+        -webkit-mask: url(bars-solid.svg) no-repeat center;
+        mask: url(bars-solid.svg) no-repeat center;
+    }
+}
